@@ -10,6 +10,7 @@ def decrypt(hash_, num):
     for combos in product('abcdefghijklmnopqrstuvwxyz', repeat=5):
         if h == hashlib.sha256(''.join(combos).encode()).hexdigest():
             passwords[num] = ''.join(combos)
+            break
 
 
 passwords = ['']*3
