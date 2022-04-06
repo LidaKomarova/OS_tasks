@@ -8,7 +8,7 @@ for_threads = list(zip(*[iter(product('abcdefghijklmnopqrstuvwxyz', repeat=5))]*
 HASH = input('Введите хэш: ')
 HASH = HASH.encode().decode()
 
-
+#23
 def decrypt(num):
     for i in range(len(for_threads[num])):
         if HASH == hashlib.sha256(''.join(for_threads[num][i]).encode()).hexdigest():
